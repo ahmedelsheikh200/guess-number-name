@@ -44,7 +44,7 @@ function check() {
         // Update high score if current score is higher
         if (score > highscore) {
             highscore = score;
-            document.querySelector(".highscore").textContent = `🥇 Highscore: ${highscore}`; // Use textContent to avoid HTML duplication
+            document.querySelector(".highscore").textContent = `${highscore}`; // Use textContent to avoid HTML duplication
         }
     }
 
