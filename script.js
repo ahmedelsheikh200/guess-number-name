@@ -44,12 +44,12 @@ function check() {
         // Update high score if current score is higher
         if (score > highscore) {
             highscore = score;
-            document.querySelector(".highscore").textContent = `🥇 Highscore: ${highscore}`; // Use textContent to avoid HTML duplication
+            document.querySelector(".highscore").textContent = `${highscore}`; // Use textContent to avoid HTML duplication
         }
     }
 
     // Update the score display
-    document.getElementsByClassName("label-score")[0].innerHTML = `${score}`;
+    document.getElementsByClassName("label-score")[0].innerHTML = `💯 Score: ${score}`;
 
     // If score reaches 0, game over
     if (score <= 0) {
@@ -68,7 +68,7 @@ function again() {
         document.querySelector(".number").innerHTML = '?';
         document.body.style.backgroundColor = '#222';
         document.querySelector(".message").innerHTML = "Start guessing...";
-        document.getElementsByClassName("label-score")[0].innerHTML = `${score}`;
+        document.getElementsByClassName("label-score")[0].innerHTML = `💯 Score: ${score}`;
         document.querySelector(".guess").value = ''; // Clear input field
         button.disabled = false; // Re-enable check button
     });
